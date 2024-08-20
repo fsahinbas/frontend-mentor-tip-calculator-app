@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <img src="./images/logo.svg" alt="splitter" class="logo" />
+  <div class="table">
+    <div class="col">
+      <div class="form">
+        <div class="form-group">
+          <label for="bill">Bill</label>
+          <div class="input">
+            <img src="./images/icon-dollar.svg" alt="dollar icon">
+            <input type="number" id="bill" placeholder="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bill">Select Tip %</label>
+          <div class="inputs">
+            <button value="5" class="btn-percent active">5%</button>
+            <button value="10" class="btn-percent">10%</button>
+            <button value="15" class="btn-percent">15%</button>
+            <button value="25" class="btn-percent">25%</button>
+            <button value="50" class="btn-percent">50%</button>
+            <input type="number" id="custom" placeholder="Custom" class="custom-percent" />
+          </div>
+        </div>
+        <div class="form-group error">
+          <div class="label-group">
+            <label for="bill">Number of People</label>
+            <span class="hidden">Can`t be zero</span>
+          </div>
+          <div class="input">
+            <img src="./images/icon-person.svg" alt="dollar icon">
+            <input type="number" id="people" placeholder="0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="key"><span>Tip Amount</span><span>/ person</span></div>
+        <div class="value" id="tip">$0</div>
+      </div>
+      <div class="row">
+        <div class="key"><span>Total</span><span>/ person</span></div>
+        <div class="value" id="total">$0</div>
+      </div>
+
+      <button class="btn-reset">RESET</button>
+    </div>
+  </div>

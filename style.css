@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --strong-cyan: #26c2ae;
+  --light-cyan: #9fe8df;
+  --very-dark-cyan: #00474b;
+  --very-dark-grayish-cyan: #5e7a7d;
+  --dark-grayish-cyan: #7f9d9f;
+  --grayish-cyan: #9ebbbd;
+  --light-grayish-cyan: #c5e4e7;
+  --very-light-grayish-cyan: #f3f9fa;
+  --error: #e17457;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.logo {
+  margin-bottom: 5.5rem;
+}
+
+.table {
+  width: 57.5rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.col:first-child {
+  width: 25.75rem;
+}
+
+.col:last-child {
+  width: 23.75rem;
+  padding: 2.5rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.key span:first-child {
+  color: var(--white);
+}
+
+.key span:last-child {
+  color: var(--dark-grayish-cyan);
+  font-size: 0.75rem;
+}
+
+.value {
+  font-size: 3rem;
+  color: var(--strong-cyan);
+}
+
+.btn-reset {
+  border-radius: 0.25rem;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 0.5rem 2.5rem;
+  border: none;
+  margin-top: 6.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-reset:hover {
+  background-color: var(--light-cyan);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.label-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error .label-group span {
+  display: block;
+}
+
+.label-group span {
+  display: none;
+}
+
+.form label {
+  color: var(--dark-grayish-cyan);
+  font-size: 1rem;
+}
+
+.label-group span {
+  font-size: 1rem;
+}
+.error .label-group span {
+  color: var(--error);
+}
+
+.error .input {
+  border: 1px solid var(--error);
+}
+
+.form .input {
+  background-color: var(--very-light-grayish-cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.form .input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-family: "Space Mono", monospace;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+}
+
+.form .inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.form .inputs .btn-percent,
+.form .inputs .custom-percent {
+  padding: 0.375rem 0.9375rem;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 7.375rem;
+  box-sizing: border-box;
+}
+
+.form .inputs .btn-percent {
+  cursor: pointer;
+}
+
+.form .inputs .btn-percent:hover,
+.form .inputs .btn-percent.active {
+  background-color: var(--strong-cyan);
+}
+
+.form .inputs .custom-percent {
+  text-align: right;
+  color: var(--very-dark-grayish-cyan);
+  background-color: var(--very-light-grayish-cyan);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    margin-top: 3.125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .table {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form .inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col:first-child,
+  .col:last-child {
+    width: 100%;
+  }
+
+  .col:last-child {
+    padding: 2rem 1.5rem;
+  }
+  .form .inputs .btn-percent,
+  .form .inputs .custom-percent {
+    width: 100%;
+  }
+
+  .key {
+    font-size: 1rem;
+  }
+  .value {
+    font-size: 2rem;
+  }
+
+  .btn-reset {
+    margin-top: 2rem;
+  }
+}
