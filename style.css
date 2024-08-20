@@ -213,6 +213,8 @@ input::-webkit-inner-spin-button {
   .table {
     flex-direction: column;
     width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .form .inputs {
